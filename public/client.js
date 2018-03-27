@@ -1,4 +1,5 @@
-var COLOUR =  '#505050';  // This is the drawing color
+var COLOUR =  '#505050';
+var colors = new Array();  // This is the drawing color
 var radius = 3;           // Constant radio for the line
 var socket = io();        // websocket to the server
 var previousPosition=[0,0]; // previous position to draw a line from
@@ -27,7 +28,10 @@ var firstMessage=true;    // What the first message, to start on the first value
       }else{ // any other message we use to draw.
         ctx.lineCap = 'round';
         ctx.lineJoin = 'round';
-        ctx.fillStyle = ctx.strokeStyle = COLOUR;
+          for(col=0x0;col<=0xFFFFFF;col++) {
+            colors.push("#" + col);
+          }
+        ctx.fillStyle = ctx.strokeStyle = colors;
         ctx.lineWidth = radius;
         ctx.beginPath();  //begin a adrawing
         ctx.moveTo( previousPosition[0], previousPosition[1] ); // from
