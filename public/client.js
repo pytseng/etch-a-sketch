@@ -20,6 +20,7 @@ var firstMessage=true;    // What the first message, to start on the first value
 
       //TODO: Map the incoming 10-bit numbers to the height and width of the screen.
       // See https://github.com/soulwire/sketch.js/wiki/API for sketch references
+      for (int color = 0x000000; color <= 0xFFFFFF; color++);
 
       if(firstMessage){ // if its the first message store that value as previous
         firstMessage=false;
@@ -27,7 +28,7 @@ var firstMessage=true;    // What the first message, to start on the first value
       }else{ // any other message we use to draw.
         ctx.lineCap = 'round';
         ctx.lineJoin = 'round';
-        ctx.fillStyle = ctx.strokeStyle = COLOUR;
+        ctx.fillStyle = ctx.strokeStyle = color;
         ctx.lineWidth = radius;
         ctx.beginPath();  //begin a adrawing
         ctx.moveTo( previousPosition[0], previousPosition[1] ); // from
