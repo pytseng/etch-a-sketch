@@ -1,4 +1,4 @@
-var COLOUR =  '#505050';
+var COLOUR =  'F00';
 var colors = new Array();  // This is the drawing color
 var radius = 3;           // Constant radio for the line
 var socket = io();        // websocket to the server
@@ -32,7 +32,7 @@ var firstMessage=true;    // What the first message, to start on the first value
             colors.push("#" + col);
             ctx.fillStyle = ctx.strokeStyle = colors;
           }
-
+        ctx.fillStyle = ctx.strokeStyle = COLOR;
         ctx.lineWidth = radius;
         ctx.beginPath();  //begin a adrawing
         ctx.moveTo( previousPosition[0], previousPosition[1] ); // from
