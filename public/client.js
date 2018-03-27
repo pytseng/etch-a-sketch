@@ -1,4 +1,4 @@
-var COLOUR =  'F00';
+var COLOUR =  '#505050';
 var colors = new Array();  // This is the drawing color
 var radius = 3;           // Constant radio for the line
 var socket = io();        // websocket to the server
