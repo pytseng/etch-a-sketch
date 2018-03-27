@@ -28,10 +28,10 @@ var firstMessage=true;    // What the first message, to start on the first value
       }else{ // any other message we use to draw.
         ctx.lineCap = 'round';
         ctx.lineJoin = 'round';
-          for(col=0x0;col<=0xFFFFFF;col++) {
-            colors.push("#" + col);
-            ctx.fillStyle = ctx.strokeStyle = colors;
-          }
+          // for(col=0x0;col<=0xFFFFFF;col++) {
+          //   colors.push("#" + col);
+          //   ctx.fillStyle = ctx.strokeStyle = colors;
+          // }
         ctx.fillStyle = ctx.strokeStyle = COLOR;
         ctx.lineWidth = radius;
         ctx.beginPath();  //begin a adrawing
