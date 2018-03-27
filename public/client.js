@@ -30,8 +30,9 @@ var firstMessage=true;    // What the first message, to start on the first value
         ctx.lineJoin = 'round';
           for(col=0x0;col<=0xFFFFFF;col++) {
             colors.push("#" + col);
+            ctx.fillStyle = ctx.strokeStyle = colors;
           }
-        ctx.fillStyle = ctx.strokeStyle = colors;
+
         ctx.lineWidth = radius;
         ctx.beginPath();  //begin a adrawing
         ctx.moveTo( previousPosition[0], previousPosition[1] ); // from
